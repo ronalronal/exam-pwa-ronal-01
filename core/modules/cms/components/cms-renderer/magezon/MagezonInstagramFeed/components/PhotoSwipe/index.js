@@ -17,7 +17,9 @@ import { generateThumborUrl, getImageFallbackUrl } from '@helpers/image';
 import { basePath } from '@config';
 
 const PhotoSwipe = (props) => {
-    const { open, setOpen, data, max_items, imagePosition, storeConfig } = props;
+    const {
+        open, setOpen, data, max_items, imagePosition, storeConfig,
+    } = props;
     const sliderRef = React.createRef();
     const { t } = useTranslation(['common']);
 

@@ -4,7 +4,9 @@ import { useState } from 'react';
 import propTypes from 'prop-types';
 
 const TextArea = (props) => {
-    const { placeholder = '', label = '', disabled, value, onChange = () => {}, hintProps = {}, inputProps = {}, className = '' } = props;
+    const {
+        placeholder = '', label = '', disabled, value, onChange = () => {}, hintProps = {}, inputProps = {}, className = '',
+    } = props;
     const [isFocus, setIsFocus] = useState(false);
 
     const { displayHintText = false, hintType = '', hintText = '' } = hintProps;

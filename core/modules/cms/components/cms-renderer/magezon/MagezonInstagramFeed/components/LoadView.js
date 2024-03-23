@@ -19,34 +19,35 @@ const MagezonInstagramFeedView = (props) => {
     if (md_hide) classInstagram += 'hidden-md ';
     if (lg_hide) classInstagram += 'hidden-lg ';
 
-    return <>
-        <div className={classInstagram}>
-            <div className="magezone-title-instagram-box">
-                <Typography
-                    variant={title_tag}
-                    align={title_align}
-                    className="magezon-title-instagram"
-                >
-                    {title}
-                </Typography>
-            </div>
-            <Link href={`https://instagram.com/${instagram_username}`} legacyBehavior>
-                <a
-                    target="_blank"
-                    color="inherit"
-                    underline="none"
-                >
+    return (
+        <>
+            <div className={classInstagram}>
+                <div className="magezone-title-instagram-box">
                     <Typography
-                        variant="span"
-                        letter="capitalize"
-                        size="14"
+                        variant={title_tag}
+                        align={title_align}
+                        className="magezon-title-instagram"
                     >
-                        {link_text}
+                        {title}
                     </Typography>
-                </a>
-            </Link>
-            <style jsx global>
-                {`
+                </div>
+                <Link href={`https://instagram.com/${instagram_username}`} legacyBehavior>
+                    <a
+                        target="_blank"
+                        color="inherit"
+                        underline="none"
+                    >
+                        <Typography
+                            variant="span"
+                            letter="capitalize"
+                            size="14"
+                        >
+                            {link_text}
+                        </Typography>
+                    </a>
+                </Link>
+                <style jsx global>
+                    {`
                     
                     .magezon-instagram {
                         width: 100%;
@@ -78,9 +79,10 @@ const MagezonInstagramFeedView = (props) => {
                         z-index:0;
                     } 
                 `}
-            </style>
-        </div>
-    </>;
+                </style>
+            </div>
+        </>
+    );
 };
 
 export default MagezonInstagramFeedView;

@@ -5,7 +5,9 @@ import cx from 'classnames';
 import { formatPrice } from '@helper_currency';
 import { checkJson } from '@core_modules/trackingorder/pages/default/helpers/checkJson';
 
-const resultItem = ({ t, orders, storeConfig, openModal }) => {
+const resultItem = ({
+    t, orders, storeConfig, openModal,
+}) => {
     const data = orders.data[0];
     if (orders.data.length > 0) {
         let { detail } = data;
@@ -48,7 +50,9 @@ const resultItem = ({ t, orders, storeConfig, openModal }) => {
                             secondary: (
                                 <Button variant="outlined" onClick={() => openModal(shipping.trackorder_type, dt)} align="left">
                                     <Typography type="bold" decoration="underline" align="left">
-                                        {shipping.track_number} {`(${shipping.trackorder_type})`}
+                                        {shipping.track_number}
+                                        {' '}
+                                        {`(${shipping.trackorder_type})`}
                                     </Typography>
                                 </Button>
                             ),

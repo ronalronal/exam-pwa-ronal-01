@@ -2,7 +2,9 @@ import Show from '@common/Show';
 import classNames from 'classnames';
 import CloseIcon from '@heroicons/react/24/outline/XCircleIcon';
 
-const Chip = ({ disabled = false, label = '', active = false, onDelete = () => {}, onClick = () => {}, className = '' }) => (
+const Chip = ({
+    disabled = false, label = '', active = false, onDelete = () => {}, onClick = () => {}, className = '',
+}) => (
     <button
         disabled={disabled}
         onClick={onClick}
